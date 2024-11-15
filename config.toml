@@ -1,0 +1,51 @@
+baseURL = 'https://pehtheme-hugo.netlify.app/'
+languageCode = 'en-us'
+title = 'Scales&Tails'
+theme = 'pehtheme'
+
+pagination.pagerSize = '3' # <- Set the desired number of posts per page 
+summaryLength = '20' # <- 20 words are approximately 160 characters
+googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
+disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.com
+
+[params]
+	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
+	description = 'From nutrition tips to habitat setup, behavior insights, and health advice, our blog is dedicated to all things bearded dragons. Whether you’re a new pet parent or a seasoned reptile enthusiast, you’ll find helpful guides, product reviews, and fun facts to make life with your beardie happier and healthier.'
+	mainSections = 'posts'
+
+[author]
+	name = 'Aryia Sharvas'
+	bio = 'Scales & Tails – Your go-to guide for happy, healthy bearded dragons!'
+	avatar = '\images\Avatar-bearded-dragon-1302398_1280.jpg'
+	twitter = 'https://twitter.com/'
+
+[menu] # Menu management
+	[[menu.main]]
+		name = 'Home'
+		pageRef = '/'
+		weight = 10
+	[[menu.main]]
+		name = 'About'
+		pageRef = '/about'
+		weight = 15
+	[[menu.main]]
+		name = 'Tags'
+		pageRef = '/tags'
+		weight = 20
+	[[menu.main]]
+		name = 'Taxonomy'
+		pageRef = '/tags/space/'
+		weight = 25
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+  [module.mounts] # Directing the static folder to assets.
+  	source = 'assets'
+  	target = 'static'
+
+	[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
